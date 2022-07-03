@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - entry point
+ * main - print exactly "and that piece of art is useful"
+ * - Dora Korpar. 2015-10-19"'
+ *   followed by a new line, to the standrad error.
  *
  * Return: 0 always
 */
