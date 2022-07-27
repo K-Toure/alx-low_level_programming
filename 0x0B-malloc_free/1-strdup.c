@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strduo -> string duplicator function
+ * _strdup -> string duplicator function
  * @str: string to be duplicated
  * Return: pointer to new string
  */
