@@ -3,24 +3,28 @@
 /**
  * _strduo -> string duplicator function
  * @str: string to be duplicated
- * Return: a string pointer
+ * Return: pointer to new string
  */
 char *_strdup(char *str)
 {
-	int i = 1, j = 0;
-	char *s;
+	int size = 0;
+	char *ptr, *ret;
 
-	if (str == NULL)
+	if (!str)
+	return (NULL);
+
+	ptr = str;
+	while (*ptr++)
+		size++;
+
+	ret = malloc(size + 1);
+	if (!ret)
 		return (NULL);
-	while (str[i])
-		i++;
-	s = (char *)malloc(i * sizeof(char) + 1);
-	if (s == NULL)
-		return (NULL);
-	while (j < i)
-	{
-		s[j] = str[j];
-		j++;
-	}
-	s[j] = '\0';
+
+	ptr = ret;
+	while (*str)
+		*ptr++ = *str++;
+
+	*ptr = 0;
+	return (ret);
 }
