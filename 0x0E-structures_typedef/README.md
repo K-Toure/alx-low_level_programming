@@ -1,0 +1,1 @@
+Structure of type define
